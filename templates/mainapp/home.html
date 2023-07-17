@@ -1,0 +1,31 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Home Page
+{% endblock title %}
+
+{% block style %}
+
+{% endblock style %}
+
+{% block body %}
+    <div class="container">
+        <h1 style="display: flex; justify-content: center; margin-top: 3rem;">Live Stock Tracker</h1>
+        <h4 style="display: flex; justify-content: center; margin-top: 1rem; text-decoration: underline;">Select Your favourite Stocks</h4>
+
+        <label for="stockpicker">Select Stocks: </label>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="stockpicker">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+
+{% endblock body %}
+
+
+
+{% block js %}{% endblock js %}
