@@ -17,11 +17,11 @@ Home Page
 
         <label for="stockpicker">Select Stocks: </label>
         <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="stockpicker">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
+            <option selected>--Select Stock--</option>
+                {% for stock in stockPicker %}
+                <option value="{{stock}}">{{stock}}</option>
+                {% endfor %}
+            </select>
     </div>
 
 {% endblock body %}

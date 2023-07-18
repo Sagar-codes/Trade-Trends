@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from yahoo_fin.stock_info import *
 
 # Create your views here.
 
 def stockTracker(request):
-    return render(request, 'mainapp/home.html')
+    stockPicker = tickers_nifty50()
+    print(stockPicker)
+    return render(request, 'mainapp/home.html', {'stockPicker':stockPicker})
 
 def liveStocks(request):
     return render(request, 'mainapp/stocks.html')
